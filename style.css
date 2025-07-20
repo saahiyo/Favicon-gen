@@ -1,0 +1,116 @@
+/* --- Themed with HSL Variables --- */
+:root {
+    --bg-light: hsl(0, 0%, 98%);
+    --text-light: hsl(0, 0%, 15%);
+    --text-muted-light: hsl(0, 0%, 45%);
+    --panel-bg-light: hsl(0, 0%, 99%);
+    --preview-bg-light: hsl(0, 0%, 95%);
+    --border-light: hsl(0, 0%, 85%);
+    --input-bg-light: hsl(0, 0%, 95%);
+    --primary-btn-bg-light: hsl(0, 0%, 15%);
+    --primary-btn-text-light: hsl(0, 0%, 98%);
+    --secondary-btn-bg-light: hsl(0, 0%, 90%);
+    --icon-btn-hover-bg-light: hsl(0, 0%, 92%);
+
+    --bg-dark: hsl(220, 13%, 12%);
+    --text-dark: hsl(220, 14%, 88%);
+    --text-muted-dark: hsl(220, 14%, 65%);
+    --panel-bg-dark: hsl(220, 13%, 18%);
+    --preview-bg-dark: hsl(220, 13%, 10%);
+    --border-dark: hsl(220, 13%, 30%);
+    --input-bg-dark: hsl(220, 13%, 22%);
+    --primary-btn-bg-dark: hsl(0, 0%, 98%);
+    --primary-btn-text-dark: hsl(0, 0%, 15%);
+    --secondary-btn-bg-dark: hsl(220, 13%, 25%);
+    --icon-btn-hover-bg-dark: hsl(220, 13%, 25%);
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html.dark body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.navbar {
+    background-color: hsla(0, 0%, 100%, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-light);
+}
+html.dark .navbar {
+    background-color: hsla(220, 13%, 12%, 0.8);
+    border-bottom-color: var(--border-dark);
+}
+
+.control-panel { background-color: var(--panel-bg-light); }
+html.dark .control-panel { background-color: var(--panel-bg-dark); }
+.preview-panel { background-color: var(--preview-bg-light); }
+html.dark .preview-panel { background-color: var(--preview-bg-dark); }
+
+.card {
+    background-color: var(--panel-bg-light);
+    box-shadow: 0 4px 15px -1px hsla(0, 0%, 0%, 0.07);
+}
+html.dark .card {
+    background-color: var(--panel-bg-dark);
+    box-shadow: 0 4px 15px -1px hsla(0, 0%, 0%, 0.2);
+}
+
+.themed-input {
+    background-color: var(--input-bg-light);
+    border-color: var(--border-light);
+}
+html.dark .themed-input {
+    background-color: var(--input-bg-dark);
+    border-color: var(--border-dark);
+}
+.themed-input:focus {
+    --tw-ring-color: var(--primary-btn-bg-light);
+    border-color: var(--text-light);
+}
+html.dark .themed-input:focus {
+    --tw-ring-color: var(--primary-btn-bg-dark);
+    border-color: var(--text-dark);
+}
+
+.primary-button {
+    background-color: var(--primary-btn-bg-light);
+    color: var(--primary-btn-text-light);
+}
+html.dark .primary-button {
+    background-color: var(--primary-btn-bg-dark);
+    color: var(--primary-btn-text-dark);
+}
+.primary-button:hover { background-color: hsl(0, 0%, 25%); }
+html.dark .primary-button:hover { background-color: hsl(0, 0%, 85%); }
+
+.secondary-button { background-color: var(--secondary-btn-bg-light); color: var(--text-light); }
+html.dark .secondary-button { background-color: var(--secondary-btn-bg-dark); color: var(--text-dark); }
+
+.tab-btn.active { background-color: var(--primary-btn-bg-light); color: var(--primary-btn-text-light); }
+html.dark .tab-btn.active { background-color: var(--primary-btn-bg-dark); color: var(--primary-btn-text-dark); }
+
+.color-picker-wrapper .color-preview { border-color: var(--border-light); }
+html.dark .color-picker-wrapper .color-preview { border-color: var(--border-dark); }
+
+.text-muted { color: var(--text-muted-light); }
+html.dark .text-muted { color: var(--text-muted-dark); }
+
+#theme-toggle:hover { background-color: var(--icon-btn-hover-bg-light); }
+html.dark #theme-toggle:hover { background-color: var(--icon-btn-hover-bg-dark); }
+
+#imageUpload { display: none; }
+input[type="range"]::-webkit-slider-thumb { background: var(--text-light); }
+html.dark input[type="range"]::-webkit-slider-thumb { background: var(--text-dark); }
+input[type="range"] { background-color: var(--secondary-btn-bg-light); }
+html.dark input[type="range"] { background-color: var(--secondary-btn-bg-dark); }
