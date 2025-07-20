@@ -58,4 +58,8 @@ MIT License. Free for personal and commercial use.
 
 ---
 
-*Created by saahiyo. Contributions welcome!* 
+*Created by saahiyo. Contributions welcome!*
+
+---
+
+**This project was vibe-coded with the help of Gemini 2.5 Pro.** 
